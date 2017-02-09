@@ -27,12 +27,12 @@ namespace HUST_1_Demo
         /// 
         static double a = 6378137.0;//定义地球长半轴长度  
         static double earth_e = 0.003352810664; //定义椭球的第一偏心律
-        //static double lat_start = 30.51584003;//定义原点位置
+        static double lat_start = 30.51584003;//定义原点位置
      //   static double lon_start = 114.42665029;
-        //static double lon_start = 114.42679000;
+        static double lon_start = 114.42679000;
 
-        static double lat_start = 0;//定义原点位置
-        static double lon_start = 0;
+      //  static double lat_start = 0;//定义原点位置
+      //  static double lon_start = 0;
 
         struct ship_state  //船舶状态信息
         {
