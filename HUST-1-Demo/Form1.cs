@@ -269,8 +269,8 @@ namespace HUST_1_Demo
         
         private ship_state Handle_response_data(ship_state boat)
         {
-            boat.Lat = ((response_data[4] << 24) + (response_data[5] << 16) + (response_data[6] << 8) + response_data[7]) / Math.Pow(10, 8);
-            boat.Lon = ((response_data[8] << 24) + (response_data[9] << 16) + (response_data[10] << 8) + response_data[11]) / Math.Pow(10, 8);
+            boat.Lat = ((response_data[4] << 24) + (response_data[5] << 16) + (response_data[6] << 8) + response_data[7]) / Math.Pow(10, 8) +30;
+            boat.Lon = ((response_data[8] << 24) + (response_data[9] << 16) + (response_data[10] << 8) + response_data[11]) / Math.Pow(10, 8) +114;
 
             boat.pos_X = (boat.Lat - lat_start) * a * (1 - Math.Pow(earth_e, 2)) * 3.1415926 / (180 * Math.Sqrt(Math.Pow((1 - Math.Pow(earth_e * Math.Sin(boat.Lat / 180 * 3.1415926), 2)), 3)));
             boat.pos_Y = -((boat.Lon - lon_start) * a * Math.Cos(boat.Lat / 180 * 3.1415926) * 3.1415926 / (180 * Math.Sqrt(1 - Math.Pow(earth_e * Math.Sin(boat.Lat / 180 * 3.1415926), 2))));//Y坐标正向朝西
