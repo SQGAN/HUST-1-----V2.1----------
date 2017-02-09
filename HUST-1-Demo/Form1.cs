@@ -554,7 +554,8 @@ namespace HUST_1_Demo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            command[0] = 0xa1;
+            int a = 0;
+            command[0] = 0xa1;//zhushi
             command[1] = 0x1a;
             command[3] = 0x47;
             serialPort1.Write(command, 0, 6);
